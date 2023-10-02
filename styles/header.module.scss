@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url("../fonts/Linotype-HelveticaNeueLTGEO75Bold.ttf") format("truetype");
+}
+
+$font-count: 'Helvetica', sans-serif;
+
+%border {
+    border: 1px solid #F1F1F5;
+    border-radius: 12px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+    border-bottom: 1px solid #F1F1F5;
+    padding: 0 16.56%;
+    --cart-count: 0; 
+
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .button {
+            border: 1px solid #F1F1F5;
+            border-radius: 12px;
+            width: 50px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        .button:nth-child(2) {
+            position: relative;
+        }
+
+        .cartBadge {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #FF4D4D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            color: white;
+            font-family: $font-count;
+            top: -15%;
+            left: 75%;
+        }
+
+        .dropDownContainer {
+            position: relative;
+            margin-left: 20px;
+
+            .userIcon {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 14.5px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

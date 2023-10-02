@@ -1,0 +1,144 @@
+@use './dropDown.module.scss' as dropDown;
+
+.domainContainer {
+    padding: 30px 40px;
+    position: relative;
+
+    .moreInfoButton {
+        background-color: #F1F1F5;
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .innerContainer {
+        padding: 17px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+
+        .leftSide {
+            display: flex;
+            align-items: center;
+
+            h3 {
+                margin-left: 20px;
+                font-family: dropDown.$font-secondary;
+            }
+        }
+
+        .rightSide {
+            display: flex;
+            align-items: center;
+
+            .price {
+                text-align: right;
+
+                h3 {
+                    font-family: dropDown.$font-secondary;
+                }
+
+                p {
+                    font-family: dropDown.$font-main;
+                    color: #696974;
+                }
+
+            }
+
+            .addToCartButton {
+                background-color: #99CC66;
+                width: 36px;
+                height: 36px;
+                border-radius: 10px;
+                padding: 10.7px 9.53px 8.7px 6.53px;
+                margin-left: 20px;
+      
+                .add {
+                    display: none;
+                    font-family: dropDown.$font-secondary;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .moreInfoButton {
+            background-color: white;
+            border: 1px solid #99CC66;
+            border-radius: 12px;
+
+        }
+
+        .innerContainer {
+            background-color: #F5F5F8;
+            .rightSide {
+                width: 211px;
+                height: 40px;
+
+                .addToCartButton {
+                    padding: 0px;
+
+                    .addToCartContainer {
+                        display: flex;
+                        background-color: #99CC66;
+                        border-radius: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        width: 120px;
+                        height: 36px;
+                        cursor: pointer;
+                        .add {
+                            display: block
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .dividerLine {
+        width: 90.76%;
+        border-bottom: 1px solid #F1F1F5;
+        position: absolute;
+        left: 4.62%;
+        bottom: 0px;
+        height: 2px;
+        visibility: visible;
+    }
+
+    .hidden {
+        width: 90.76%;
+        border-bottom: 1px solid #F1F1F5;
+        position: absolute;
+        left: 4.62%;
+        bottom: 0px;
+        height: 2px;
+        visibility: hidden;
+
+    }
+
+}
+
+
+.clickedAndHovered {
+    background-color: #F5F5F8;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+    .add{
+        color: #696974;
+        margin-left: 6px;
+    }
+  }

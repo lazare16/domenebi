@@ -1,0 +1,63 @@
+@use '../styles/dropDown.module.scss' as dropDown;
+
+.moneyRangeContainer {
+    width: 315px;
+
+    .moneyRangeInput {
+
+        margin-top: 35px;
+        display: block;
+
+        label {
+            color: #171D25;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-family: dropDown.$font-bold;
+        }
+
+        .moneyInputGroup {
+            display: flex;
+            justify-content: space-between;
+
+            .inputGroup {
+                position: relative;
+                width: 150px;
+
+                .inputGroupAddon {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 15px;
+                    font: normal normal normal 14px/19px dropDown.$font-main;
+                    color: #92929D;
+                }
+
+                input {
+                    width: 150px;
+                    height: 44px;
+                    border-radius: 10px;
+                    border: 1px solid #E5E5ED;
+                    padding-left: 15px;
+                    font-family: dropDown.$font-main;
+                }
+
+                input[type="number"]::-webkit-inner-spin-button,
+                input[type="number"]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    margin: 0;
+                }
+
+                input[type="number"] {
+                    -moz-appearance: textfield;
+                    appearance: none;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+            }
+        }
+
+    }
+}

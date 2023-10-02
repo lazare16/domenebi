@@ -1,0 +1,112 @@
+@use './dropDown.module.scss' as dropDown;
+
+.main {
+    background-color: #FAFAFB;
+    min-height: 90vh;
+    padding-bottom: 122px;
+    .banner {
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+          font-family:  dropDown.$font-bold;
+          font-size: 36px;
+          font-weight:100;
+          line-height: 37px;
+          position: absolute;
+          color: #FFFFFF;
+        }
+
+        .imageContainer {
+            background-image: url('../public/images/banner@2x.png');
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
+            border-radius: 15px;
+            width: 67.0833%;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .img{
+                filter: grayscale(2%) brightness(60%);  
+            }
+        }
+    }
+
+    .info{
+
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16.56%;
+
+        .domainCount{
+            h3{
+                font-family:  dropDown.$font-bold;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 40px;
+                color: #696974;
+                span{
+                    color: black;
+                }
+            }
+        }
+
+        .filterBy{
+            display: flex;
+
+            h3{
+                font-family: dropDown.$font-bold;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 40px;
+                color: #171725;
+            }
+
+            nav{
+                margin-left: 16px;
+                font: normal normal normal 14px/40px dropDown.$font-main;
+                color: #92929D;
+
+                span:not(:first-child){
+                   margin-left: 20px;
+                }
+
+                span:first-child{
+                    color: #99CC66;
+                }
+            }
+        }
+
+        .additionalInfo{
+            .moreInfoLink{
+                color: #171725;
+                font: normal normal normal 14px/40px dropDown.$font-main;
+            }
+        }
+    }
+    
+    .panelsContainer{
+        width: 66.98%;
+        display: flex;
+        justify-content: start;
+        margin-top: 28px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .filterPanelContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 1510px;
+            justify-content: space-between;
+        }  
+    }
+}

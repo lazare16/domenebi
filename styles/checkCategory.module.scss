@@ -1,0 +1,59 @@
+@use './dropDown.module.scss' as dropDown;
+
+.formContainer {
+    width: 315px;
+    margin-top: 40px;
+
+    h3 {
+        font-family: dropDown.$font-bold;
+        margin-bottom: 21px;
+    }
+
+    .checkContainer {
+        font-family: dropDown.$font-main;
+
+        label {
+            margin-left: 15px;
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #E5E5ED;
+            border-radius: 6px;
+            outline: none;
+            position: relative;
+            
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: #99CC66;
+           border: 1px solid #99CC66;
+        }
+
+        input[type="checkbox"]:checked::after {
+            content: url('../public/images/checkIcon.svg');
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10px;
+            height: 10px;
+            top: 4px;
+            left: 3.5px;
+
+        }
+
+        input[type="checkbox"]:hover {
+            box-shadow: 0 0 5px 5px #E5E5ED;
+        }
+    }
+
+    .checkContainer:not(:first-child) {
+        margin-top: 25px;
+
+    }
+}

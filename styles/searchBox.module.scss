@@ -1,0 +1,43 @@
+@use './dropDown.module.scss' as dropDown;
+
+.form{
+    .searchBoxContainer{
+        position: relative;
+        .cancelIcon {
+            position: absolute;
+            top: 61%;
+            right: 19.85px;
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+          }
+          
+        input{
+            width: 315px;
+            height: 60px;
+            border-radius: 10px;
+            border: 2px solid #E5E5ED;
+            margin-top: 35px;
+            font-family: dropDown.$font-main;
+            color: #92929D;
+            font-size: 16px;
+            line-height: 40px;
+            padding-left: 20px;
+        }
+    
+        input:focus {
+            outline: none;
+          }
+
+          .showIcon {
+            opacity: 1;
+          }
+    }
+}
+
+  
+  
+  
+  
+  
+  
+  

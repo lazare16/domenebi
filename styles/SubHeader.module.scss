@@ -1,0 +1,28 @@
+@use './dropDown.module.scss' as dropDown;
+
+.subheader {
+    box-shadow: 0px 3px 6px #00000005;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+
+    .nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding:0 16.56%;
+
+        .link {
+            text-decoration: none;
+            font-family: dropDown.$font-main; 
+            color: #696974;
+        }
+
+        .link:not(:first-child) {
+            margin-left: 29px;
+        }
+
+    }
+}
