@@ -12,6 +12,8 @@ import DomainPanel from '../components/DomainPanel'; //implementing  domain pane
 
 import SearchBox from './SearchBox'; //implementing searchbox
 
+import SortBy from './SortBy';
+
 import { domains } from './DomainsData';
 
 export default function Main() {
@@ -75,6 +77,10 @@ export default function Main() {
 
                     {/* second search input */}
                     <SearchBox onSearch={handleSearch} />
+
+                    <div className={styles.SortBy}>
+                        <SortBy />
+                    </div>
                 </div>
 
                 {/* domain panel */}

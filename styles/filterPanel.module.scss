@@ -1,3 +1,5 @@
+@use './header.module.scss' as header;
+
 .filterPanel{
     background-color: #FFFFFF;
     width: 380px;
@@ -8,4 +10,10 @@
     border-radius: 15px;
     padding: 0 30px;
     border: 1px solid #F1F1F5;
+}
+
+@media (max-width: header.$layout-breakpoint-small){
+    .filterPanel{
+       display: none;
+    }
 }

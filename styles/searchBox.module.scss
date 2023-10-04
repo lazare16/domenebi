@@ -1,5 +1,7 @@
 @use './dropDown.module.scss' as dropDown;
 
+@use './header.module.scss' as header;
+
 .form{
     .searchBoxContainer{
         position: relative;
@@ -34,7 +36,11 @@
     }
 }
 
-  
+@media (max-width: header.$layout-breakpoint-small){
+  .form{
+    display: none;
+  }
+}
   
   
   

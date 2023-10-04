@@ -28,6 +28,21 @@ export const domains = [
         zone: '.net.ge'
       },
 
+      {
+        domainName: 'zura.net.ge',
+        priceInGEL: 40000,
+        category : ["უძრავი ქონება", "ტექნოლოგიები"],
+        zone: '.net.ge'
+      },
+       
+
+      {
+        domainName: 'koba.net.ge',
+        priceInGEL: 40000,
+        category : ["უძრავი ქონება", "ტექნოლოგიები"],
+        zone: '.net.ge'
+      },
+
       
 
   ];

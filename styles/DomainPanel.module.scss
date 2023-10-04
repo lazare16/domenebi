@@ -1,3 +1,5 @@
+@use '../styles/header.module.scss' as header;
+
 .domainPanel{
     background-color: #FFFFFF;
     width: 75%;
@@ -7,3 +9,11 @@
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: header.$layout-breakpoint-small){
+    .domainPanel{
+        width: 100%;
+        margin-left: 0px;
+        border-radius: 0px;
+    }
+  }

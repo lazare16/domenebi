@@ -1,5 +1,7 @@
 @use './dropDown.module.scss' as dropDown;
 
+@use './header.module.scss' as header;
+
 .domainContainer {
     padding: 30px 40px;
     position: relative;
@@ -57,15 +59,21 @@
                 border-radius: 10px;
                 padding: 10.7px 9.53px 8.7px 6.53px;
                 margin-left: 20px;
-      
+                .addToCartContainer{
+                    width: 36px;
+                    transition: width 1s ease;
+                }
+
                 .add {
                     display: none;
                     font-family: dropDown.$font-secondary;
                     color: white;
+                    transition: display 0.9s ease;
                 }
             }
         }
     }
+
 
     &:hover {
         .moreInfoButton {
@@ -77,6 +85,7 @@
 
         .innerContainer {
             background-color: #F5F5F8;
+
             .rightSide {
                 width: 211px;
                 height: 40px;
@@ -94,10 +103,10 @@
                         height: 36px;
                         cursor: pointer;
                         .add {
-                            display: block
+                            display: block;
                         }
-
                     }
+
                 }
             }
         }
@@ -137,8 +146,81 @@
     height: 36px;
     border-radius: 10px;
     cursor: pointer;
-    .add{
+
+    .add {
         color: #696974;
         margin-left: 6px;
     }
-  }
+}
+
+@media (max-width: header.$layout-breakpoint-small) {
+    .domainContainer {
+        padding: 30px 0px;
+        // background-color: red;
+        width: 100%;
+
+        .innerContainer {
+            // background-color: green;
+            width: 100%;
+            padding: 0px;
+            justify-content: space-around;
+
+            .leftSide {
+                // background-color: red;
+                font-family: dropDown.$font-secondary;
+
+                h3 {
+                    margin-left: 15px;
+                    font-weight: 100;
+                }
+            }
+
+            .rightSide {
+                .price {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &:hover {
+            .moreInfoButton {
+                background-color: #F1F1F5;
+                border: 0px;
+                border-radius: 12px;
+
+            }
+
+            .innerContainer {
+                background-color: #FFFFFF;
+
+                .rightSide {
+                    width: 120px;
+                    height: 36px;
+                    // background-color: red;
+
+                    .addToCartButton {
+                        padding: 0px;
+
+                        .addToCartContainer {
+                            display: flex;
+                            // background-color: blue;
+                            border-radius: 10px;
+                            justify-content: center;
+                            align-items: center;
+                            width: 36px;
+                            // transform: background-color 1s ease-in;
+                            height: 36px;
+                            cursor: pointer;
+
+                            .add {
+                                display: none
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

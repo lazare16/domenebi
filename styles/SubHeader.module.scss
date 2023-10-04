@@ -1,5 +1,7 @@
 @use './dropDown.module.scss' as dropDown;
 
+@use './header.module.scss' as header;
+
 .subheader {
     box-shadow: 0px 3px 6px #00000005;
     display: flex;
@@ -24,5 +26,12 @@
             margin-left: 29px;
         }
 
+    }
+}
+
+
+@media (max-width: header.$layout-breakpoint-small){
+    .subheader{
+        display: none;
     }
 }
