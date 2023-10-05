@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 // Import the CartCountProvider component from the components directory.
 import { CartCountProvider } from '../components/CartCountProvider';
 
@@ -15,6 +17,7 @@ import Main from '../components/main';
 
 
 export default function Home() {
+  const [burgerMenuPressed, setBurgerMenuPressed] = useState<boolean>(false);
 
   return (
     <>
@@ -27,9 +30,9 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         
-        <Header />
+        <Header burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/>
         <SubHeader />
-        <Main />
+        <Main burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/>
       </CartCountProvider>
     </>
   );

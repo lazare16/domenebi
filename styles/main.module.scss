@@ -98,9 +98,9 @@
     
     .panelsContainer{
         // background-color: red;
-        width: 66.98%;
+        width: 66.979vw;
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
         margin-top: 28px;
         margin-left: auto;
         margin-right: auto;
@@ -111,11 +111,17 @@
             align-items: center;
             height: 1510px;
             justify-content: space-between;
+            // background-color: blue;
+            // width: 19.792vw;
 
             .SortBy{
                 display: none;
             }
-        }  
+        }
+        
+        .domainPanelContainer{
+            // background-color: green;
+        }
     }
 }
 

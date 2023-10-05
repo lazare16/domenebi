@@ -6,7 +6,12 @@ import SymbolRange from './SymbolRange'; //importing symbol range component
 import Category from './Category'; //importing category component 
 import DomainZone from './DomainZone'; //importing domain zone component
 
-export default function FilterPanel() {
+interface MainProps {
+    burgerMenuPressed: boolean;
+    setBurgerMenuPressed: (value: boolean) => void;
+  }
+
+export default function FilterPanel({ burgerMenuPressed, setBurgerMenuPressed }: MainProps) {
 
     //function for handling search 
     const handleSearch = (searchTerm: string) => {
@@ -16,10 +21,10 @@ export default function FilterPanel() {
     return (
 
         // filter panel
-        <div className={styles.filterPanel}>
+        <div className={styles.filterPanel} style={burgerMenuPressed ? {display: 'block'} : {}}>
 
             {/* inner components of the filter panel */}
-            <SearchBox onSearch={handleSearch}  />  {/* search input component */}
+            <SearchBox onSearch={handleSearch}  burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/>  {/* search input component */}
             <PriceRange />  {/* price range component */}
             <SymbolRange />  {/* symbol range component */}
             <Category />  {/* category component */}

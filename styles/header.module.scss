@@ -5,6 +5,13 @@
 
 $font-count: 'Helvetica', sans-serif;
 
+@font-face {
+    font-family: 'TKT_BOLD';
+    src: url("../fonts/TKT-Bold.ttf") format("truetype");
+}
+
+$font-bold: 'TKT_BOLD', sans-serif;
+
 %border {
     border: 1px solid #F1F1F5;
     border-radius: 12px;
@@ -20,6 +27,7 @@ $layout-breakpoint-small: 1484px;
     justify-content: space-between;
     border-bottom: 1px solid #F1F1F5;
     padding: 0 16.56%;
+    position: relative;
     --cart-count: 0; 
 
     .headerLeftSide{
@@ -45,6 +53,13 @@ $layout-breakpoint-small: 1484px;
             width: 100%;
             height: 100%;
             // background-color: yellow;
+        }
+
+        .filterHeader{
+            font-family: $font-bold;
+            display: none;
+            position: absolute;
+            left: 20px;
         }
     }
 
@@ -124,6 +139,13 @@ $layout-breakpoint-small: 1484px;
                 // background-color: yellow;
                 
             }
+
+            .burgerMenu:hover{
+                cursor: pointer;
+                // background-color: yellow;
+                
+            }
+
             .logo{
                 // background-color: yellow;
             }
@@ -167,7 +189,7 @@ $layout-breakpoint-small: 1484px;
             }
 
             
-            .button:last-child{
+            .flag{
                 display: none;
             }
 
@@ -176,6 +198,17 @@ $layout-breakpoint-small: 1484px;
                 padding: 0px;
                 content: url('../public/images/shoppingCart2Icon.svg');
               }
+
+            .cancleButton{
+                width: 36px;
+                height: 36px;
+                border-radius: 10px;
+                background-color: #E5E5ED;
+                padding-top: 8px;
+                padding-left: 12px;
+                cursor: pointer;
+                
+            }
         }
     }
 }

@@ -3,11 +3,16 @@ import Image from 'next/image'; //enabling using images
 import cancel from '../public/images/cancel.svg'; //cancel icon
 import styles from '../styles/searchBox.module.scss'; //styling
 
+
+
+
 interface SearchBoxProps {
+  burgerMenuPressed: boolean;
+  setBurgerMenuPressed: (value: boolean) => void;
   onSearch: (searchTerm: string) => void;
 }
 
-const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
+const SearchBox: React.FC<SearchBoxProps> = ({ onSearch, setBurgerMenuPressed, burgerMenuPressed }: SearchBoxProps) => {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const handleSearch = (e: FormEvent) => {
@@ -24,7 +29,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSearch} className={styles.form}>
+    <form onSubmit={handleSearch} className={styles.form} style={burgerMenuPressed ? {display: 'block'} : {}}>
 
       {/* container for search box */}
       <div className={styles.searchBoxContainer}>

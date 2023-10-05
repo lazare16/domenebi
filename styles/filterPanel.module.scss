@@ -15,5 +15,9 @@
 @media (max-width: header.$layout-breakpoint-small){
     .filterPanel{
        display: none;
+       width: 100%;
+       border-radius: 0px;
+    //    background-color: blue;
+       padding-left: 7%;
     }
 }

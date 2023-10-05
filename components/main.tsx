@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import Image from 'next/image'; //enabling image usage
 
 import Link from 'next/link'; //enabling usage of <Link> tag
@@ -16,8 +18,14 @@ import SortBy from './SortBy';
 
 import { domains } from './DomainsData';
 
-export default function Main() {
-     
+interface MainProps {
+    burgerMenuPressed: boolean;
+    setBurgerMenuPressed: (value: boolean) => void;
+}
+
+export default function Main({ burgerMenuPressed, setBurgerMenuPressed }: MainProps) {
+
+
     // function for handling search
     const handleSearch = (searchTerm: string) => {
         console.log('Searching for:', searchTerm);
@@ -27,7 +35,7 @@ export default function Main() {
         <main className={styles.main}>
 
             {/*banner container*/}
-            <div className={styles.banner}>
+            <div className={styles.banner} style={burgerMenuPressed ? { display: 'none' } : {}}>
                 <div className={styles.imageContainer}>
                     <h1>გაყიდე და იყიდე დომენი მარტივად</h1>
                 </div>
@@ -40,7 +48,7 @@ export default function Main() {
                 <div className={styles.domainCount}>
                     <h3>დომენები მარკეტზე: <span>{domains.length}</span></h3>
                 </div>
-                
+
                 {/* filter by (fast access) */}
                 <div className={styles.filterBy}>
                     <h3>
@@ -61,31 +69,39 @@ export default function Main() {
                         <span>ანბანით</span>
                     </nav>
                 </div>
-                
+
                 {/* information about how to sell the domain */}
                 <div className={styles.additionalInfo}>
                     <Link href="#" className={styles.moreInfoLink}>როგორ გავყიდო დომენი?</Link>
                 </div>
             </div>
-            
+
             {/* container for domain panel and filter panel */}
             <div className={styles.panelsContainer}>
 
                 {/* filter panel container */}
                 <div className={styles.filterPanelContainer}>
-                    <FilterPanel />
+                    <FilterPanel burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed} />
 
                     {/* second search input */}
-                    <SearchBox onSearch={handleSearch} />
+                    <div className={styles.secondSearch}>
+                        <SearchBox onSearch={handleSearch} burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/>
+                    </div>
 
-                    <div className={styles.SortBy}>
+                    <div className={styles.SortBy} style={burgerMenuPressed ? { display: 'none' } : {}}>
                         <SortBy />
                     </div>
                 </div>
 
                 {/* domain panel */}
-                <DomainPanel /> 
+                <div className={styles.domainPanelContainer} style={burgerMenuPressed ? { display: 'none' } : {}}>
+                    <DomainPanel />
+                </div>
             </div>
+
+            {/* <div className={styles.footerButton}>
+                <div className={styles.footerButtonContent}><h3>ძიება</h3></div>
+            </div> */}
         </main>
     )
 }
