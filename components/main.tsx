@@ -86,7 +86,7 @@ export default function Main({ burgerMenuPressed, setBurgerMenuPressed }: MainPr
 
                     {/* second search input */}
                     <div className={styles.secondSearch}>
-                        <SearchBox onSearch={handleSearch}/> {/* we don't add props to second search box becuse we don't want to appear on burger menu click*/}
+                        <SearchBox onSearch={handleSearch} burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/> {/* we don't add props to second search box becuse we don't want to appear on burger menu click*/}
                     </div>
 
                     <div className={styles.SortBy} style={burgerMenuPressed ? { display: 'none' } : {}}> {/* SortBy is implemented in the div so it can be hidden when burger menu is pressed */}
