@@ -122,12 +122,16 @@
         
     }
 
+    .searchButton{
+        display: none;
+    }
 }
 
 // styling for the phone
 @media (max-width: header.$layout-breakpoint-small){
     .main{
-        min-height: 1008px;
+        min-height: 1512px;
+        position: relative;
 
         // banner width will set up to 100%
         .banner{
@@ -167,6 +171,7 @@
             height: 500px;
             margin-top: 0px;
             
+            
             // filter panel will use up the 100% of the screen
             .filterPanelContainer{
                 width: 100%;
@@ -178,6 +183,32 @@
 
                 .secondSearch{
                     display: none;
+                }
+            }
+        }
+
+        // search button for mobile filter
+        .searchButton{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 83px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px -3px 6px #00000014;
+
+            .searchButtonContent{
+                width: 90%;
+                height: 50px;
+                border-radius: 10px;
+                background-color: #003333;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h3{
+                    font-family: dropDown.$font-bold;
+                    color: white;
                 }
             }
         }

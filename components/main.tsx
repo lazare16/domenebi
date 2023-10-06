@@ -99,6 +99,11 @@ export default function Main({ burgerMenuPressed, setBurgerMenuPressed }: MainPr
                     <DomainPanel />
                 </div>
             </div>
+            
+            {/* search button for mobile filter */}
+            <div className={styles.searchButton} style={burgerMenuPressed ? {display: 'flex'} : {display: 'none'}}>
+                <div className={styles.searchButtonContent}><h3>ძიება</h3></div>
+            </div>
         </main>
     )
 }
