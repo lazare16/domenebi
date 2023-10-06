@@ -17,7 +17,7 @@ import Main from '../components/main';
 
 
 export default function Home() {
-  const [burgerMenuPressed, setBurgerMenuPressed] = useState<boolean>(false);
+  const [burgerMenuPressed, setBurgerMenuPressed] = useState<boolean>(false); {/* passing burger menu state to controll if the button is pressed or not */}
 
   return (
     <>
@@ -30,9 +30,9 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         
-        <Header burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/>
+        <Header burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/> {/*passing the props*/}
         <SubHeader />
-        <Main burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/>
+        <Main burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/> {/*passing the props*/}
       </CartCountProvider>
     </>
   );

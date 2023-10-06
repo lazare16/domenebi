@@ -6,6 +6,7 @@ import SymbolRange from './SymbolRange'; //importing symbol range component
 import Category from './Category'; //importing category component 
 import DomainZone from './DomainZone'; //importing domain zone component
 
+// passing down the props
 interface MainProps {
     burgerMenuPressed: boolean;
     setBurgerMenuPressed: (value: boolean) => void;
@@ -21,7 +22,7 @@ export default function FilterPanel({ burgerMenuPressed, setBurgerMenuPressed }:
     return (
 
         // filter panel
-        <div className={styles.filterPanel} style={burgerMenuPressed ? {display: 'block'} : {}}>
+        <div className={styles.filterPanel} style={burgerMenuPressed ? {display: 'block'} : {}}> {/* if burger menu is pressed filter pannel will be displayed on mobile */}
 
             {/* inner components of the filter panel */}
             <SearchBox onSearch={handleSearch}  burgerMenuPressed={burgerMenuPressed} setBurgerMenuPressed={setBurgerMenuPressed}/>  {/* search input component */}

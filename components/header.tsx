@@ -7,7 +7,6 @@ import { CartCountContext } from './CartCountProvider';
 // Importing icons.
 import Image from 'next/image';
 import styles from '../styles/header.module.scss';
-// import Logo from '../public/images/logo.svg';
 import Bell from '../public/images/bell-icon.svg';
 import ShoppingCart from '../public/images/shopping-cart-icon.svg';
 import DropDown from './dropDown';
@@ -15,6 +14,7 @@ import User from '../public/images/user-icon.svg';
 import GeorgianFlag from '../public/images/Georgian-flag.svg';
 import Cancle from '../public/images/cancle.svg';
 
+// passing header props so header  can be changeg when burger menu is pressed
 interface HeaderProps {
   burgerMenuPressed: boolean;
   setBurgerMenuPressed: (value: boolean) => void;
@@ -39,18 +39,18 @@ export default function Header({ burgerMenuPressed, setBurgerMenuPressed }: Head
   }
 
   return (
-    <header className={styles.header} style={burgerMenuPressed ? {justifyContent: 'space-between', paddingRight: '20px', boxShadow: '0px 2px 5px #0000000F'} : {}}>
+    <header className={styles.header} style={burgerMenuPressed ? {justifyContent: 'space-between', paddingRight: '20px', boxShadow: '0px 2px 5px #0000000F'} : {}}> {/* header will get the box shadow when burger menu be pressed, added padding and justify content changed to space between for better content fit*/}
       <div className={styles.headerLeftSide}>
-        <div className={styles.burgerMenu} onClick={burgerMenuClicked} style={burgerMenuPressed ? {display: 'none'} : {}}></div>
-        <div className={styles.logo} style={burgerMenuPressed ? { visibility: 'hidden' } : { visibility: 'visible' }}></div>
-        <div className={styles.filterHeader} style={burgerMenuPressed ? {display: 'block', color: '#696974'} : {}}><h3>ფილტრი</h3></div>
+        <div className={styles.burgerMenu} onClick={burgerMenuClicked} style={burgerMenuPressed ? {display: 'none'} : {}}></div> {/* burger menu will be hidden when it will be pressed*/}
+        <div className={styles.logo} style={burgerMenuPressed ? { visibility: 'hidden' } : { visibility: 'visible' }}></div> {/* logo will be hidden as well */}
+        <div className={styles.filterHeader} style={burgerMenuPressed ? {display: 'block', color: '#696974'} : {}}><h3>ფილტრი</h3></div> {/* filter text will appear when button will be pressed */}
       </div>
 
       {/* nav section */}
       <nav className={styles.nav}>
 
         {/* notification button */}
-        <div className={styles.button} style={burgerMenuPressed ? {display: 'none'} : {}}>
+        <div className={styles.button} style={burgerMenuPressed ? {display: 'none'} : {}}> {/* all icons will be hidden when burger menu be pressed*/}
           <Image src={Bell} alt="bell-icon" />
         </div>
 

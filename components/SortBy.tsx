@@ -2,8 +2,11 @@ import styles from '../styles/sortBy.module.scss'; //using styling as module
 
 export default function SortBy() {
     return (
+        // sortBy container to align inputs side by side
         <div className={styles.sortByContainer}>
             <form action="#">
+
+                {/* input containers */}
                 <div className={styles.sortByInputContainer}>
                     <input type="text" className={styles.sortByInput} placeholder='სორტირება'/>
                 </div>

@@ -1,20 +1,16 @@
 @use '../styles/dropDown.module.scss' as dropDown;
 
 .sortByContainer {
-    // background-color: blue;
     width: 100%;
     height: 74px;
     display: flex;
     align-items: center;
 
     form {
-        // background-color: brown;
         width: 100%;
         display: flex;
 
         .sortByInputContainer {
-            // background-color: green;
-
             input {
                 width: 160px;
                 height: 40px;
@@ -23,11 +19,9 @@
                 font-family: dropDown.$font-main;
                 padding-left: 13.77px;
             }
-
         }
 
         .sortByDropDown {
-            // background-color: cyan;
             margin-left: 15px;
 
             .sortBySelect {
@@ -42,9 +36,8 @@
                 appearance: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                background-image: url('../public/images/Dropdown\ -\ 2.svg');
+                background-image: url('../public/images/Dropdown\ -\ 2.svg'); //adding custom dropdown icon
                 background-repeat: no-repeat;
-                // padding-right: 20px;
                 background-position: 135.39px;
             }
         }

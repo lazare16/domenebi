@@ -5,7 +5,7 @@ import styles from '../styles/searchBox.module.scss'; //styling
 
 
 
-
+// passing down the burger menu props
 interface SearchBoxProps {
   burgerMenuPressed: boolean;
   setBurgerMenuPressed: (value: boolean) => void;
@@ -29,7 +29,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch, setBurgerMenuPressed, b
   };
 
   return (
-    <form onSubmit={handleSearch} className={styles.form} style={burgerMenuPressed ? {display: 'block'} : {}}>
+    <form onSubmit={handleSearch} className={styles.form} style={burgerMenuPressed ? {display: 'block'} : {}}> {/* if the button will be pressed search box will appear inside of the filter panel */}
 
       {/* container for search box */}
       <div className={styles.searchBoxContainer}>

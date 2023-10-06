@@ -33,7 +33,6 @@ $layout-breakpoint-small: 1484px;
     .headerLeftSide{
         width: 225px;
         height: 38px;
-        // background-color: purple;
         display: flex;
         align-items: center;
            
@@ -43,7 +42,7 @@ $layout-breakpoint-small: 1484px;
             background-image: url('../public/images/burgerMenu.svg');
             background-repeat: no-repeat;
             background-size: cover;
-            display: none;
+            display: none; //hidden for desktop
         }
 
         .logo{
@@ -52,7 +51,6 @@ $layout-breakpoint-small: 1484px;
             background-size: cover;
             width: 100%;
             height: 100%;
-            // background-color: yellow;
         }
 
         .filterHeader{
@@ -123,47 +121,38 @@ $layout-breakpoint-small: 1484px;
 // adding responsiveness to mobile
 @media (max-width: $layout-breakpoint-small){
     .header{
-        // background-color: red;
         padding: 0px;
-        justify-content: space-around;
+        justify-content: space-around; //header justify-content will be switched to space-around for better fit for header content
         height: 70px;
 
         .headerLeftSide{
-            // background-color: purple;
             width: 159px;
             height: 20.92px;
 
             .burgerMenu{
-                display: block;
+                display: block; //burger menu will appear when on mobile
                 margin-right: 14px;
-                // background-color: yellow;
                 
             }
 
             .burgerMenu:hover{
-                cursor: pointer;
-                // background-color: yellow;
-                
-            }
-
-            .logo{
-                // background-color: yellow;
+                cursor: pointer;   
             }
         }
 
         .nav{
-            // background-color: blue;
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 84px;
+
             .dropDownContainer{
-                // background-color: yellow;
                 margin-left: 22.09px;
                 width: 20px;
                 height: 20px;
+
+                // make only user icon visible when on mobile
                 .userIcon{
-                    // background-color: green;
                     position: static;
                     z-index: 10;
                     top: 0%;
@@ -171,14 +160,15 @@ $layout-breakpoint-small: 1484px;
                     transform: translateY(0%);
                     content: url('../public/images/user2Icon.svg');
                 }
+                
+                // hiding dropdown
                 .dropDown{
                     display: none;
                 }
             }
             
             .button{
-                border: none;
-                // background-color: pink;
+                border: none; //hiding border for mobile
                 width: 20px;
                 height: 20px;
                 border-radius: 0px;
@@ -188,17 +178,17 @@ $layout-breakpoint-small: 1484px;
                 content: url('../public/images/bell2Icon.svg');
             }
 
-            
             .flag{
-                display: none;
+                display: none; //hiding language button
             }
 
-            
             .ShoppingCartButton{
                 padding: 0px;
                 content: url('../public/images/shoppingCart2Icon.svg');
               }
+            
 
+            //   adding cancelation button
             .cancleButton{
                 width: 36px;
                 height: 36px;
@@ -206,8 +196,7 @@ $layout-breakpoint-small: 1484px;
                 background-color: #E5E5ED;
                 padding-top: 8px;
                 padding-left: 12px;
-                cursor: pointer;
-                
+                cursor: pointer; 
             }
         }
     }
