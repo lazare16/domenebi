@@ -153,20 +153,18 @@
     }
 }
 
+// styling for mobile
 @media (max-width: header.$layout-breakpoint-small) {
     .domainContainer {
         padding: 30px 0px;
-        // background-color: red;
         width: 100%;
 
         .innerContainer {
-            // background-color: green;
             width: 100%;
             padding: 0px;
             justify-content: space-around;
 
             .leftSide {
-                // background-color: red;
                 font-family: dropDown.$font-secondary;
 
                 h3 {
@@ -176,6 +174,9 @@
             }
 
             .rightSide {
+                width: 120px;
+                height: 36px;
+
                 .price {
                     font-size: 14px;
                 }
@@ -187,7 +188,6 @@
                 background-color: #F1F1F5;
                 border: 0px;
                 border-radius: 12px;
-
             }
 
             .innerContainer {
@@ -196,31 +196,30 @@
                 .rightSide {
                     width: 120px;
                     height: 36px;
-                    // background-color: red;
 
                     .addToCartButton {
                         padding: 0px;
-
+                        
                         .addToCartContainer {
-                            display: flex;
-                            // background-color: blue;
                             border-radius: 10px;
-                            justify-content: center;
-                            align-items: center;
+                            padding: 10.7px 9.53px 8.7px 6.53px;
                             width: 36px;
-                            // transform: background-color 1s ease-in;
                             height: 36px;
                             cursor: pointer;
 
                             .add {
-                                display: none
+                                display: none;
                             }
-
                         }
-
                     }
                 }
             }
+        }
+    }
+
+    .addToCartButton {
+        .addToCartContainer {
+            transition: none !important;
         }
     }
 }
